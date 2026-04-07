@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<StackPane fx:id="loadingPane"
+           xmlns:fx="http://javafx.com/fxml"
+           visible="false"
+           style="-fx-background-color: rgba(0,0,0,0.4);"
+           fx:controller="com.br.appuifx.view.shared.LoadingController">
+
+    <VBox alignment="CENTER" spacing="10">
+        <ProgressIndicator fx:id="progress"/>
+        <Label text="Carregando..."/>
+    </VBox>
+
+</StackPane>

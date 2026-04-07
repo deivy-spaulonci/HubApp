@@ -1,0 +1,60 @@
+*{
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI";
+}
+.root {
+
+}
+
+#loadingPane {
+    -fx-background-color: rgba(0,0,0,0.5);
+}
+
+.button, .menu-item {
+    -fx-cursor: hand;
+}
+.button{ -fx-font-weight: bold; }
+
+.menu .ikonli-font-icon, .menu-item .ikonli-font-icon {
+    -fx-icon-color: #00438B;
+}
+/* Aumenta a altura da linha de cabeçalho toda */
+.table-view .column-header-background {
+    -fx-pref-height: 35px; /* Altere para a altura desejada */
+}
+
+/* Opcional: Garante que as células internas do cabeçalho ocupem a altura total */
+.table-view .column-header {
+    -fx-size: 35px;
+}
+
+.text-field.error {
+    -fx-border-color: red;
+}
+
+.grid-status{
+    -fx-background-color: #2196f3;
+}
+
+.label-status{
+    -fx-font-size: 26px !important;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-fill: #007bff;
+}
+
+.label-error-alert{
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-font-style: italic;
+    -fx-background-color: #dc3545;
+}
+
+.bt-default{ -fx-icon-color: #00438B; }
+
+.back-blue{ -fx-background-color: #00438b; }
+.back-green{ -fx-background-color: #28a745; }
+.back-red{ -fx-background-color: #dc3545; }
+.back-yellow{ -fx-background-color: #ffc107; }

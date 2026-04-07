@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.br.appuifx.controller.fornecedor.pessoaFisica.EditPessoaFisicaController">
+    <VBox prefHeight="400.0" prefWidth="570.0" spacing="10.0">
+        <HBox style="-fx-font-size: 22px; -fx-font-style: italic;">
+            <Text text="Pessoa Fisica : " style="-fx-fill: #00438B;"/>
+            <Text fx:id="uuid" style="-fx-fill: #00438B;"/>
+        </HBox>
+        <Label text="Nome: "/>
+        <TextField fx:id="inputNome" maxWidth="Infinity"/>
+        <Label text="CPF: "/>
+        <TextField fx:id="inputCpf" maxWidth="Infinity"/>
+        <Label text="Estado / Cidade: "/>
+        <HBox spacing="20">
+            <ComboBox fx:id="cbEstado" minWidth="70" visibleRowCount="25"/>
+            <ComboBox fx:id="cbCidade" minWidth="320" visibleRowCount="25"/>
+        </HBox>
+        <HBox alignment="CENTER" spacing="50">
+            <Button fx:id="btSalvar" minHeight="40" minWidth="100" mnemonicParsing="false" onAction="#salvar"
+                    text="Salvar">
+                <graphic>
+                    <FontIcon iconLiteral="fas-save" iconSize="18" styleClass="bt-default"/>
+                </graphic>
+            </Button>
+            <Button fx:id="btCancel" minHeight="40" minWidth="100" mnemonicParsing="false" text="Cancelar"
+                    onAction="#fechar">
+                <graphic>
+                    <FontIcon iconLiteral="far-times-circle" iconSize="18" iconColor="red"/>
+                </graphic>
+            </Button>
+        </HBox>
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10"/>
+        </padding>
+    </VBox>
+    <fx:include fx:id="loading" source="/view/loading.fxml"/>
+</StackPane>

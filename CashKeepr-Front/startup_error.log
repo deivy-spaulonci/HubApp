@@ -1,0 +1,35 @@
+
+> sakai-ng@20.0.0 start
+> ng serve
+
+Node.js version v25.2.1 detected.
+Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/previous-releases/.
+ [1mPort 4200 is already in use.
+Would you like to use a different port?[22m [2m(Y/n)[22m[47Gnode:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: setRawMode EIO
+    at ReadStream.setRawMode (node:tty:81:24)
+    at [_setRawMode] [as _setRawMode] (node:internal/readline/interface:418:18)
+    at Interface.close (node:internal/readline/interface:552:24)
+    at ReadStream.ontermend (node:internal/readline/interface:280:10)
+    at ReadStream.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+Emitted 'error' event on Interface instance at:
+    at ReadStream.onerror (node:internal/readline/interface:259:10)
+    at ReadStream.emit (node:events:508:28)
+    at ReadStream.setRawMode (node:tty:81:10)
+    at [_setRawMode] [as _setRawMode] (node:internal/readline/interface:418:18)
+    at Interface.close (node:internal/readline/interface:552:24)
+    at ReadStream.ontermend (node:internal/readline/interface:280:10)
+    at ReadStream.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  errno: -5,
+  code: 'EIO',
+  syscall: 'setRawMode'
+}
+
+Node.js v25.2.1

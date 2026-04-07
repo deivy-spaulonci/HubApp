@@ -1,0 +1,24 @@
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/app-api/pom.xml" />
+        <option value="$PROJECT_DIR$/app-fx/pom.xml" />
+        <option value="$PROJECT_DIR$/app-shell/pom.xml" />
+        <option value="$PROJECT_DIR$/app-ui/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/TestK/pom.xml" />
+        <option value="$PROJECT_DIR$/app-fx/pom.xml" />
+        <option value="$PROJECT_DIR$/app-sw/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="25" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

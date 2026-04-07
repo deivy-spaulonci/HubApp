@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<TitledPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.br.appuifx.controller.fornecedor.pessoaFisica.PessoaFisicaController"
+            collapsible="false" prefHeight="Infinity" prefWidth="Infinity" text="Pessoa Fisica">
+    <BorderPane>
+        <left>
+            <VBox minWidth="400.0" spacing="10.0">
+                <Label text="Nome: "/>
+                <TextField fx:id="inputNome" maxWidth="Infinity"/>
+                <Label text="CPF: "/>
+                <TextField fx:id="inputCpf" maxWidth="Infinity"/>
+                <Label text="Estado / Cidade: "/>
+                <HBox spacing="20">
+                    <ComboBox fx:id="cbEstado" minWidth="70" visibleRowCount="25"/>
+                    <ComboBox fx:id="cbCidade" minWidth="320" visibleRowCount="25"/>
+                </HBox>
+                <StackPane>
+                    <Button fx:id="btSalvar" minHeight="40" minWidth="100" mnemonicParsing="false" onAction="#salvar" text="Salvar">
+                        <graphic>
+                            <FontIcon iconLiteral="fas-save" iconSize="18" styleClass="bt-default"/>
+                        </graphic>
+                    </Button>
+                </StackPane>
+                <padding>
+                    <Insets bottom="10" left="10" right="10" top="50"/>
+                </padding>
+            </VBox>
+        </left>
+        <center>
+            <BorderPane>
+                <top>
+                    <TextField fx:id="inputBusca" maxWidth="Infinity"/>
+                </top>
+                <center>
+                    <StackPane>
+                        <TableView fx:id="tablePessoaFisica" prefWidth="600">
+                            <columns>
+                                <TableColumn fx:id="colNome" prefWidth="500" text="Nome" />
+                                <TableColumn fx:id="colCpf" prefWidth="200" text="CPF" />
+                                <TableColumn fx:id="colEdit" minWidth="50" text="Editar"/>
+                            </columns>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem text="Editar" onAction="#editar">
+                                            <graphic>
+                                                <FontIcon iconLiteral="far-edit" />
+                                            </graphic>
+                                        </MenuItem>
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </TableView>
+                        <fx:include fx:id="loading" source="/view/loading.fxml" />
+                    </StackPane>
+                </center>
+            </BorderPane>
+        </center>
+    </BorderPane>
+</TitledPane>

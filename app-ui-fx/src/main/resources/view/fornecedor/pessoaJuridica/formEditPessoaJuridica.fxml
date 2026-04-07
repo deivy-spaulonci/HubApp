@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.StackPane?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.geometry.Insets?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import javafx.scene.control.Button?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.br.appuifx.controller.fornecedor.pessoaJuridica.EditPessoaJuridicaController">
+    <VBox prefHeight="320.0" prefWidth="570.0" spacing="10.0">
+        <HBox style="-fx-font-size: 22px; -fx-font-style: italic;">
+            <Text text="Pessoa Juridica : " style="-fx-fill: #00438B;"/>
+            <Text fx:id="uuid" style="-fx-fill: #00438B;"/>
+        </HBox>
+        <Label text="CNPJ: "/>
+        <TextField fx:id="inputCnpj" maxWidth="Infinity"/>
+        <Label text="Nome: "/>
+        <TextField fx:id="inputNome" maxWidth="Infinity"/>
+        <Label text="Razão Social: "/>
+        <TextField fx:id="inputRazaoSocial" maxWidth="Infinity"/>
+        <Label text="Estado / Cidade: "/>
+        <HBox spacing="20">
+            <TextField fx:id="lblUf" minWidth="70" disable="true"/>
+            <TextField fx:id="lblCidade" minWidth="320" disable="true"/>
+        </HBox>
+        <HBox alignment="CENTER" spacing="50">
+            <Button fx:id="btSalvar" minHeight="40" mnemonicParsing="false" onAction="#salvar"
+                    text="Salvar">
+                <graphic>
+                    <FontIcon iconLiteral="fas-save" iconSize="18" styleClass="bt-default"/>
+                </graphic>
+            </Button>
+            <Button fx:id="btCancel" minHeight="40" minWidth="100" mnemonicParsing="false" text="Cancelar"
+                    onAction="#fechar">
+                <graphic>
+                    <FontIcon iconLiteral="far-times-circle" iconSize="18" iconColor="red"/>
+                </graphic>
+            </Button>
+        </HBox>
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10"/>
+        </padding>
+    </VBox>
+    <fx:include fx:id="loading" source="/view/loading.fxml"/>
+</StackPane>

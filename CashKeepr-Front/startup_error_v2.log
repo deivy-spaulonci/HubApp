@@ -1,0 +1,26 @@
+Node.js version v25.2.1 detected.
+Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/previous-releases/.
+❯ Building...
+✔ Building...
+Initial chunk files | Names         |  Raw size
+main.js             | main          | 272.51 kB | 
+chunk-G3GO2VJI.js   | -             | 125.42 kB | 
+styles.css          | styles        |  87.33 kB | 
+chunk-2IWE7ESR.js   | -             |  28.22 kB | 
+chunk-FQFWLKKP.js   | -             |   5.00 kB | 
+chunk-EVSPGG2W.js   | -             |   1.64 kB | 
+polyfills.js        | polyfills     |  95 bytes | 
+
+                    | Initial total | 520.21 kB
+
+Lazy chunk files    | Names         |  Raw size
+chunk-BU45IDBI.js   | uikit-routes  | 612.34 kB | 
+chunk-KQLTGSBN.js   | pages-routes  | 424.48 kB | 
+chunk-WONYYYQW.js   | auth-routes   |  35.40 kB | 
+chunk-O7G67T6S.js   | -             |  33.22 kB | 
+
+Application bundle generation complete. [4.331 seconds]
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://localhost:4201/

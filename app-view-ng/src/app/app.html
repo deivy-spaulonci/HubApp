@@ -1,0 +1,26 @@
+<div class="flex h-screen bg-gray-100 h-full h-screen" >
+  <p-menu [model]="items" class="w-50 flex flex-col h-full border-hidden" [style]="{border:'none',height:'100%'}">
+    <ng-template #start>
+        <span class="inline-flex items-center gap-1 px-5 py-10">
+            <i class="pi pi-objects-column text-emerald-700" style="font-size: 3.5rem"></i>
+            <span class="text-xl font-semibold px-2 text-emerald-700">HUB<span class="text-primary"> APP</span></span>
+        </span>
+    </ng-template>
+    <ng-template #submenuheader let-item>
+        <span class="pi pi-angle-right text-emerald-700"></span>
+        <span class="font-bold text-emerald-700 px-3">{{ item.label }}</span>
+    </ng-template>
+    <ng-template #item let-item>
+        <a pRipple class="flex items-center px-10 py-2 cursor-pointer" [routerLink]="item.routerLink">
+            <span [class]="item.icon"></span>
+            <span class="ms-2">{{ item.label }}</span>
+        </a>
+    </ng-template>
+  </p-menu>
+  <!-- CONTEUDO -->
+  <main class="flex-1 p-3 overflow-auto">
+      <router-outlet />
+  </main>
+</div>
+
+
