@@ -89,7 +89,7 @@ public interface DespesaRepository extends JpaRepository<Despesa, BigInteger>, J
             public Predicate toPredicate(Root<Despesa> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
                 List<Predicate> predicates = new ArrayList<>();
 
-                if (!despesaFilter.tipos().isEmpty()) {
+                if (despesaFilter.tipos()!=null && !despesaFilter.tipos().isEmpty()) {
                     predicates.add(root.get(Despesa_.tipoDespesa).in(despesaFilter.tipos()));
                 }
 //                if (Objects.nonNull(despesaFilter.tipos()) && despesaFilter.tipos().size() > 0)
