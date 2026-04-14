@@ -136,11 +136,7 @@ public class ContaTable extends JPanel{
                     detailValor.setText(FormatUtil.formatMoeda(selecionado.valor()));
                     detailDataPgto.setText(FormatUtil.formatData(selecionado.dataPagamento()));
                     if(selecionado.formaPagamento()!=null) {
-                        detailFormaPgto.setText(
-                                selecionado.formaPagamento().getModalidade().getDescricao() +
-                                        (selecionado.formaPagamento().getInstituicao() == null ? "" : " - " + selecionado.formaPagamento().getInstituicao())
-
-                        );
+                        detailFormaPgto.setText(selecionado.formaPagamento().getDescricao());
                         detailValorPgto.setText(FormatUtil.formatMoeda(selecionado.valorPago()));
                         detailObs.setText(selecionado.observacao());
                     }

@@ -28,8 +28,7 @@ public class PagamentosArquivoService {
         if (raiz.exists()) {
             nodes.add(criarNoRecursivo(raiz));
         }
-
-        return nodes;
+        return nodes.get(0).children.reversed();
     }
 
     private TreeNodeResponseDTO criarNoRecursivo(File arquivo) {

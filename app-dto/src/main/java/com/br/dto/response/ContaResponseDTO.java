@@ -17,7 +17,7 @@ public record ContaResponseDTO(
     Integer totalParcela,
     BigDecimal valor,
     LocalDate dataPagamento,
-    FormaPagamento formaPagamento,
+    FormaPagamentoResponseDTO formaPagamento,
     BigDecimal valorPago,
     String titulo,
     String comprovante,

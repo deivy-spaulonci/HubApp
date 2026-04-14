@@ -117,12 +117,13 @@ export class ContaForm implements OnInit {
                 vencimento: Util.dateToDataBR(resp.vencimento),
                 parcela: resp.parcela,
                 totalParcela: resp.totalParcela,
-                valor: Util.maskMoeda(resp.valor + ''),
+                valor: Util.formatFloatToReal(resp.valor),
                 dataPagamento: Util.dateToDataBR(resp.dataPagamento + ''),
-                valorPago: Util.maskMoeda(resp.valorPago + ''),
+                valorPago: Util.formatFloatToReal(resp.valorPago),
                 observacao: resp.observacao,
                 formaPagamento: resp.formaPagamento
             });
+
         });
     }
 

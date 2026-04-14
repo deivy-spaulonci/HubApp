@@ -22,13 +22,11 @@ export class Util {
     }
     return '';
   }
-  static formatFloatToReal(valor: string): string{
-    var v = valor.replace(/\D/g, '');
-    v = (Number(v) / 100).toFixed(2) + '';
-    v = v.replace('.', ',');
-    v = v.replace(/(\d)(\d{3})(\d{3}),/g, '$1.$2.$3,');
-    v = v.replace(/(\d)(\d{3}),/g, '$1.$2,');
-    return v.toString();
+  static formatFloatToReal(valor: number): string{
+      return new Intl.NumberFormat('pt-BR', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+      }).format(valor);
   }
 
   static maskMoeda(valorIn: string):string {

@@ -234,7 +234,6 @@ import { Observable } from 'rxjs';
                         </div>
                     </div>
                 </div>
-                {{ statusSelected }}
                 <p-button icon="pi pi-filter" label="Filtrar" [style]="{ width: '120px' }" [raised]="true" severity="success" size="large" (click)="tableConta._filter()" />
             </div>
         </p-drawer>
