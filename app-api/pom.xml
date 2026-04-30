@@ -14,6 +14,11 @@
     <name>app-api</name>
     <description>app-api</description>
 
+    <properties>
+
+    </properties>
+
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -38,6 +43,18 @@
             <artifactId>app-service</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
+<!--        SECURITY-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
